@@ -9,6 +9,7 @@ public class UpdateData {
 
 	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
+		System.out.println("Hello Yash>>>");
 		Connection connection=null;
 		CallableStatement callableStatement=null;
 		try {
@@ -22,7 +23,7 @@ public class UpdateData {
 			 callableStatement =connection.prepareCall("update user set city=? where id=?");
 			
 			callableStatement.setString(1, "pune");
-			callableStatement.setInt(2, 5);
+			callableStatement.setInt(2, 2);
 			
 			callableStatement.execute();
 		} catch (Exception e) {
